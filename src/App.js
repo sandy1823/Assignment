@@ -7,6 +7,7 @@ import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 import PrimarySearchAppBar from './MenuNav';
 import LoginPage from './LoginPage';
+import Cancellation from './Cancellation';
 
 const validPerson = {
   name: 'ancyAnthony@gmail.com'
@@ -22,28 +23,12 @@ function App() {
   }, [])
   return (
     <>
-      {allowed && allowed ?
+      {/* {allowed && allowed ?
         <PrimarySearchAppBar /> :
-        <LoginPage />}
+        <LoginPage />} */}
+      <Cancellation />
     </>
   );
 }
 
 export default App;
-{/* <Row gutter={16}>
-        <Col span={8}>
-          <Card title="Revenue" bordered={false}>
-        
-          </Card>
-        </Col>
-        <Col span={8}>
-          <Card title="Sales" bordered={false}>
-
-          </Card>
-        </Col>
-        <Col span={8}>
-          <Card title="Costs" bordered={false}>
-
-          </Card>
-        </Col>
-      </Row> */}
