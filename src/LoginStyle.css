@@ -1,0 +1,17 @@
+.container {
+    padding: 25px;
+    background-color: lightblue;
+    margin: 0 auto;
+    display: table;
+    height: 70%;
+}
+
+.userName{
+    margin: 10px;
+}
+.password{
+    margin: 10px;
+}
+.submitBtn{
+    margin: 10px;
+}

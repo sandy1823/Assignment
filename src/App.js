@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import PrimarySearchAppBar from './MenuNav';
 import LoginPage from './LoginPage';
 import Cancellation from './Cancellation';
+import Login from './Login';
 
 const validPerson = {
   name: 'ancyAnthony@gmail.com'
@@ -26,7 +27,9 @@ function App() {
       {/* {allowed && allowed ?
         <PrimarySearchAppBar /> :
         <LoginPage />} */}
-      <Cancellation />
+      {/* <Cancellation /> */}
+      {/* <LoginPage/> */}
+      <Login/>
     </>
   );
 }
