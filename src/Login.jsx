@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import "./LoginStyle.css";
 import axios from "axios";
+import { json } from "react-router-dom";
 const Login = () => {
 
     const [getData, setGetData] = useState(
@@ -26,13 +27,21 @@ const Login = () => {
         })
     }
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async (e) => {
+
         e.preventDefault()
+
         console.log("getData", getData);
-        await axios.post('http://localhost:3001/login/login', getData).then((res) => {
+        let config = {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            data: JSON.stringify(getData)
+        };
+        await axios.get('http://localhost:5000/login/login').then((res) => {
             console.log("ressss", res);
         }).catch((err) => {
-            console.log(err);
+            console.log("**",err);
         })
     }
     return (
